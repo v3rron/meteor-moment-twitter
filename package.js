@@ -1,6 +1,6 @@
 Package.describe({
   name: 'verron:moment-twitter',
-  version: '0.2.0',
+  version: '0.2.1',
   // Brief, one-line summary of the package.
   summary: '',
   // URL to the Git repository containing the source code for this package.
@@ -12,13 +12,6 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.2.0.1');
-  api.use('ecmascript');
-  api.addFiles('moment-twitter.js');
-});
-
-Package.onTest(function(api) {
-  api.use('ecmascript');
-  api.use('tinytest');
-  api.use('verron:moment-twitter');
-  api.addFiles('moment-twitter-tests.js');
+  api.use('momentjs:moment@2.10.6', 'client');
+  api.addFiles(['export.js', 'moment-twitter.js'], 'client');
 });
