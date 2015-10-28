@@ -13,12 +13,5 @@ Package.describe({
 Package.onUse(function(api) {
   api.versionsFrom('1.2.0.1');
   api.use('momentjs:moment');
-  api.addFiles(['export.js', 'moment-twitter.js']);
-  api.export('moment');
-});
-
-Package.onTest(function(api) {
-  api.use('ecmascript');
-  api.use('tinytest');
-  api.addFiles(['moment-twitter-tests.js']);
+  api.addFiles(['export.js', 'moment-twitter.js'], 'client');
 });

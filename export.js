@@ -1,1 +1,1 @@
-moment = Package['momentjs:moment'].moment;
+this.moment = Package['momentjs:moment'].moment;
