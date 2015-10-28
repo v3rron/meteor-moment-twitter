@@ -12,6 +12,6 @@ Package.describe({
 
 Package.onUse(function(api) {
   api.versionsFrom('1.2.0.1');
-  api.use('momentjs:moment');
+  api.use('momentjs:moment', 'client');
   api.addFiles(['export.js', 'moment-twitter.js'], 'client');
 });
